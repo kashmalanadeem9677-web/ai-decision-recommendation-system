@@ -1,4 +1,5 @@
 import os
+import tempfile
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
@@ -142,14 +143,21 @@ async def upload_knowledge_pdf(
 
     file_bytes = await file.read()
 
-    temporary_path = f"uploaded_{file.filename}"
+    temporary_path = None
 
-    with open(temporary_path, "wb") as output_file:
-        output_file.write(file_bytes)
+    try:
+        with tempfile.NamedTemporaryFile(
+            suffix=".pdf",
+            delete=False
+        ) as temporary_file:
+            temporary_file.write(file_bytes)
+            temporary_path = temporary_file.name
 
-    pages = extract_pdf_text(temporary_path)
+        pages = extract_pdf_text(temporary_path)
 
-    os.remove(temporary_path)
+    finally:
+        if temporary_path and os.path.exists(temporary_path):
+            os.remove(temporary_path)
 
     chunks_to_insert = []
 
