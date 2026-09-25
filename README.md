@@ -1086,3 +1086,34 @@ The system has also been validated with both matching and no-match inputs to ens
 This project is currently intended as a development/internship project.
 
 Add an appropriate license before public distribution if required.
+## Frontend Screenshots
+
+### Screenshot 1
+![Screenshot 1](screenshots/proj%202%20ss1.png)
+
+### Screenshot 2
+![Screenshot 2](screenshots/proj%202%20ss2.png)
+
+### Screenshot 3
+![Screenshot 3](screenshots/proj%202%20ss3.png)
+
+### Screenshot 4
+![Screenshot 4](screenshots/proj2%20ss4.png)
+
+### Screenshot 5
+![Screenshot 5](screenshots/proj%202%20ss5.png)
+
+### Screenshot 6
+![Screenshot 6](screenshots/proj%202%20ss6.png)
+
+### Screenshot 7
+![Screenshot 7](screenshots/proj%202%20ss7.png)
+
+### Screenshot 8
+![Screenshot 8](screenshots/proj%202%20ss8.png)
+
+### Screenshot 9
+![Screenshot 9](screenshots/proj2%20ss10.png)
+
+### Screenshot 10
+![Screenshot 10](screenshots/proj%202%20ss12.png)
